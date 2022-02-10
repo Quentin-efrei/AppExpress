@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('Cloning git') {
             steps {
@@ -26,9 +25,7 @@ pipeline {
                     bat "git checkout release"
                     bat "git pull origin main"
                     bat "git push origin release"
-                    //bat 'git commit -m "Test passed, releasing"'
-                   // bat "git push https://${Quentinè-efrei}:${Paris&brest1597532486}@AppExpress.git --tags"
-                }
+            	}
             }
         }
     }
