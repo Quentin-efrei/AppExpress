@@ -23,7 +23,8 @@ pipeline {
                     bat 'git config --global user.email "quentin.courtois@efrei.net"'
                     bat 'git config --global user.name "Quentin-efrei"'
                     bat "git checkout release"
-                    bat "git pull origin main"
+                    bat "git pull origin dev"
+                    bat 'git commit -m "Pushing release update"'
                     bat "git push origin release"
             }
         }
