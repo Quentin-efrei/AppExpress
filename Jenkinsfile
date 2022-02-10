@@ -22,9 +22,8 @@ pipeline {
             steps {
                     bat 'git config --global user.email "quentin.courtois@efrei.net"'
                     bat 'git config --global user.name "Quentin-efrei"'
-                    bat "git merge release"
                     bat "git checkout release"
-                    bat "git merge dev"
+                    bat "git push origin release"
             }
         }
     }
