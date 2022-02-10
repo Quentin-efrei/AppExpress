@@ -25,7 +25,6 @@ pipeline {
                     bat "git checkout release"
                     bat "git pull origin main"
                     bat "git push origin release"
-            	}
             }
         }
     }
