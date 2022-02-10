@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Cloning git') {
             steps {
-                git([url:'https://github.com/Quentin-efrei/AppExpress.git',branch:'dev'])
+                git([url:'https://github.com/Quentin-efrei/AppExpress.git',branch:'release'])
+		bat "git pull origin dev"
             }
         }
         stage('Building') {
@@ -22,8 +23,6 @@ pipeline {
             steps {
                     bat 'git config --global user.email "quentin.courtois@efrei.net"'
                     bat 'git config --global user.name "Quentin-efrei"'
-                    bat "git checkout release"
-                    bat "git pull origin dev"
 	   	    bat "git push origin release"
             }
         }
