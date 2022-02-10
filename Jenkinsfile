@@ -24,7 +24,6 @@ pipeline {
                     bat 'git config --global user.name "Quentin-efrei"'
                     bat "git checkout release"
                     bat "git merge dev"
-		    bat "git push origin release"
             }
         }
     }
